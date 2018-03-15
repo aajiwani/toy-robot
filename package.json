@@ -1,0 +1,15 @@
+{
+  "name": "toy-robot",
+  "version": "1.0.0",
+  "description": "A command line toy-robot simulation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.realestate.com.au:recruiting/toy-robot.git"
+  },
+  "author": "Anonymous",
+  "license": "MIT"
+}

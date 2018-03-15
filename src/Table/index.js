@@ -18,4 +18,13 @@ export default class {
 			y: this.limitY,
 		};
 	}
+
+	get Boundary() {
+		return {
+			x1: 1,
+			y1: 1,
+			x2: this.limitX,
+			y2: this.limitY,
+		};
+	}
 }

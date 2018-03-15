@@ -1,15 +1,22 @@
 {
-  "name": "toy-robot",
-  "version": "1.0.0",
-  "description": "A command line toy-robot simulation",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@git.realestate.com.au:recruiting/toy-robot.git"
-  },
-  "author": "Anonymous",
-  "license": "MIT"
+	"name": "toy-robot",
+	"version": "1.0.0",
+	"description": "A command line toy-robot simulation",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha tests/**.spec.js",
+		"start": "./node_modules/babel-cli/bin/babel-node.js index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@git.realestate.com.au:recruiting/toy-robot.git"
+	},
+	"author": "Anonymous",
+	"license": "MIT",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"chai": "^4.1.2",
+		"mocha": "^5.0.4"
+	}
 }

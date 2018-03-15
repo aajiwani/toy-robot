@@ -1,3 +1,6 @@
+import Direction from "@app/src/Helpers/Direction";
+import _ from "lodash";
+
 export default class {
 	/**
 	 * Constructs a command input or output
@@ -8,6 +11,8 @@ export default class {
 	constructor(x, y, direction) {
 		this.x = x;
 		this.y = y;
+
+		if (!_.includes(Direction, direction)) throw new Error("Unknown direction to construct a command tupple");
 		this.direction = direction;
 	}
 

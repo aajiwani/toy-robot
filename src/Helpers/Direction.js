@@ -1,6 +1,6 @@
 export default {
-	NORTH: "N",
-	SOUTH: "S",
-	EAST: "E",
-	WEST: "W",
+	NORTH: "NORTH",
+	SOUTH: "SOUTH",
+	EAST: "EAST",
+	WEST: "WEST",
 };

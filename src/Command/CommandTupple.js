@@ -26,7 +26,7 @@ export default class {
 	}
 
 	/**
-	 * Returns initials of the direction
+	 * Returns the direction
 	 */
 	get Direction() {
 		return this.direction;

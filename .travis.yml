@@ -11,4 +11,5 @@ install:
   - yarn install
 script:
   - ". ./travis.sh"
-after_success: yarn coveralls
+after_success:
+  - yarn coveralls

@@ -1,2 +1,2 @@
-yarn test
+yarn ci_tests
 exit $?

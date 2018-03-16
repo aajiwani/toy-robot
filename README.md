@@ -1,5 +1,8 @@
 # Toy Robot Simulator
 
+[![Build Status](https://travis-ci.org/aajiwani/toy-robot.svg?branch=master)](https://travis-ci.org/aajiwani/toy-robot)
+[![Dependency status](https://david-dm.org/aajiwani/toy-robot.svg)](https://david-dm.org/aajiwani/toy-robot)
+
 ## Running Guide
 
 ### Please install and configure `npm` and `yarn` before proceeding

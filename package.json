@@ -25,12 +25,14 @@
   },
   "dependencies": {
     "eslint": "^4.18.2",
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "prompt": "^1.0.0"
   },
   "nyc": {
     "exclude": [
       "src/Command/AbstractCommand.js",
-      "src/RobotController/CommandExecutor/AbstractCommand.js"
+      "src/RobotController/CommandExecutor/AbstractCommand.js",
+      "index.js"
     ]
   }
 }

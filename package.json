@@ -20,13 +20,17 @@
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "mocha": "^5.0.4",
-    "nyc": "^11.6.0"
+    "nyc": "^11.6.0",
+    "sinon": "^4.4.6"
   },
   "dependencies": {
     "eslint": "^4.18.2",
     "lodash": "^4.17.5"
   },
   "nyc": {
-    "exclude": ["src/Command/AbstractCommand.js"]
+    "exclude": [
+      "src/Command/AbstractCommand.js",
+      "src/RobotController/CommandExecutor/AbstractCommand.js"
+    ]
   }
 }

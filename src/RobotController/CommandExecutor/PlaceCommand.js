@@ -9,14 +9,15 @@ export default class extends AbstractCommand {
    * @param {RobotController} controller The robot controller
    */
   ParseAndExecute(commandText, controller) {
-    let reg = /^PLACE\s+([\d]+)\s*,([\d]+)\s*,\s*(east|west|north|south)\s*$/gim;
-    let result = commandText.exec(reg);
-    if (!_.isEmpty(result))
+    let reg = /^\s*PLACE\s+([\d]+)\s*,\s*([\d]+)\s*,\s*(east|west|north|south)\s*$/gim;
+    let result = reg.exec(commandText);
+    if (!_.isEmpty(result)) {
       return controller.PlaceRobot(
         _.toInteger(result[1]),
         _.toInteger(result[2]),
         Direction.Parse(result[3])
       );
+    }
     return false;
   }
 }

@@ -8,8 +8,8 @@ export default class extends AbstractCommand {
    * @param {RobotController} controller The robot controller
    */
   ParseAndExecute(commandText, controller) {
-    let reg = /^REPORT\s*$/gim;
-    let result = commandText.exec(reg);
+    let reg = /^\s*REPORT\s*$/gim;
+    let result = reg.exec(commandText);
     if (!_.isEmpty(result)) return controller.GetRobotStatus();
     return false;
   }

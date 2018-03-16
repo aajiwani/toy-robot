@@ -1,17 +1,16 @@
 import AbstractCommand from "./AbstractCommand";
-import Direction from "@app/src/Helpers/Direction";
 import _ from "lodash";
 
 export default class extends AbstractCommand {
-	/**
-	 * Parses: LEFT
-	 * @param {string} commandText Command text to parse
-	 * @param {RobotController} controller The robot controller
-	 */
-	ParseAndExecute(commandText, controller) {
-		let reg = /^LEFT\s*$/gim;
-		let result = commandText.exec(reg);
-		if (!_.isEmpty(result)) return controller.TurnRobotLeft();
-		return false;
-	}
+  /**
+   * Parses: LEFT
+   * @param {string} commandText Command text to parse
+   * @param {RobotController} controller The robot controller
+   */
+  ParseAndExecute(commandText, controller) {
+    let reg = /^LEFT\s*$/gim;
+    let result = commandText.exec(reg);
+    if (!_.isEmpty(result)) return controller.TurnRobotLeft();
+    return false;
+  }
 }

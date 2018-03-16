@@ -1,32 +1,29 @@
 import AbstractCommand from "./AbstractCommand";
 import Direction from "@app/src/Helpers/Direction";
 import CommandTupple from "./CommandTupple";
+import _ from "lodash";
 
 export default class extends AbstractCommand {
-	/**
-	 * Turns the toy to right
-	 * @param {CommandTupple} commandTupple
-	 */
-	static Execute(commandTupple) {
-		let newDir = null;
-		switch (commandTupple.Direction) {
-			case Direction.EAST:
-				newDir = Direction.SOUTH;
-				break;
+  /**
+   * Turns the toy to right
+   * @param {CommandTupple} commandTupple
+   */
+  static Execute(commandTupple) {
+    let directions = [
+      Direction.WEST,
+      Direction.NORTH,
+      Direction.EAST,
+      Direction.SOUTH,
+    ];
 
-			case Direction.WEST:
-				newDir = Direction.NORTH;
-				break;
-
-			case Direction.NORTH:
-				newDir = Direction.EAST;
-				break;
-
-			case Direction.SOUTH:
-				newDir = Direction.WEST;
-				break;
-		}
-
-		return new CommandTupple(commandTupple.X, commandTupple.Y, newDir);
-	}
+    let result = _.findIndex(directions, item =>
+      _.isEqual(item, commandTupple.Direction)
+    );
+    if (result !== -1) {
+      let selDir = null;
+      if (result === _.size(directions) - 1) selDir = directions[0];
+      else selDir = directions[result + 1];
+      return new CommandTupple(commandTupple.X, commandTupple.Y, selDir);
+    }
+  }
 }

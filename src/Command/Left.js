@@ -19,11 +19,10 @@ export default class extends AbstractCommand {
     let result = _.findIndex(directions, item =>
       _.isEqual(item, commandTupple.Direction)
     );
-    if (result !== -1) {
-      let selDir = null;
-      if (result === 0) selDir = directions[_.size(directions) - 1];
-      else selDir = directions[result - 1];
-      return new CommandTupple(commandTupple.X, commandTupple.Y, selDir);
-    }
+
+    let selDir = null;
+    if (result === 0) selDir = directions[_.size(directions) - 1];
+    else selDir = directions[result - 1];
+    return new CommandTupple(commandTupple.X, commandTupple.Y, selDir);
   }
 }

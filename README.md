@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/aajiwani/toy-robot.svg?branch=master)](https://travis-ci.org/aajiwani/toy-robot)
 [![Dependency status](https://david-dm.org/aajiwani/toy-robot.svg)](https://david-dm.org/aajiwani/toy-robot)
+[![Coverage Status](https://coveralls.io/repos/github/aajiwani/toy-robot/badge.svg?branch=master)](https://coveralls.io/github/aajiwani/toy-robot?branch=master)
 
 ## Running Guide
 

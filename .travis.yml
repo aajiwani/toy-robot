@@ -9,6 +9,7 @@ install:
 - yarn install
 script:
 - yarn ci_tests
+- env
 after_install:
 - yarn coveralls
 env:

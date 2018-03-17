@@ -11,7 +11,7 @@
     "prestart": "cd src && npm link && cd .. && npm link @app/src",
     "pretest": "cd src && npm link && cd .. && npm link @app/src",
     "coveralls":
-      "find ./tests -name '*spec.js' | xargs nyc --reporter=text-lcov mocha -R spec --require babel-core/register | coveralls",
+      "find ./tests -name '*spec.js' | xargs nyc --reporter=text-lcov mocha -R spec --require babel-core/register | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "precoveralls": "cd src && npm link && cd .. && npm link @app/src",
     "ci_tests":
       "yarn pretest && find ./tests -name '*spec.js' | xargs nyc --reporter=text mocha -R spec --require babel-core/register"

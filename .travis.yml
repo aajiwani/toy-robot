@@ -9,5 +9,8 @@ install:
 - yarn install
 script:
 - yarn ci_tests
-after_install:
+after_success:
+- export CI_BUILD_NUMBER="$TRAVIS_BUILD_NUMBER"
+- export CI_PULL_REQUEST="$TRAVIS_PULL_REQUEST"
+- export CI_BRANCH="$TRAVIS_BRANCH"
 - yarn coveralls

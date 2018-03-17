@@ -10,6 +10,7 @@
 
 1.  Install Dependencies `yarn install`
 2.  Run Tests `yarn test`
+    * After running tests, an interactive report could be found under coverage/index.html
 3.  Run Interactive Mode `yarn start`
 
 ## Dependencies

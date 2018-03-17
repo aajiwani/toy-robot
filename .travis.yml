@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-- '7'
+- 'stable'
 sudo: false
 before_install:
-- node --version
-- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.3.2
 - export PATH=$HOME/.yarn/bin:$PATH
 cache: yarn
 install:
 - yarn install
 script:
-- ". ./travis.sh"
+- yarn ci_tests
+after_install:
+- yarn coveralls
 env:
   global:
     secure: XN2/KBYKo0N/anbxfoMdDbRMmXM7my2DjHTZVI+uP8CJwFhGQQCLX40LySkKqSAR0If9t8WrtwDxmrnvsO6rkLl/YRCcc5xQtCpjg6b6JJ3GMkENQMz+uprohM1sE/mYpam2467B1cz9/9+PTrQV1bV70siMnUUk+k/s+dCzMi4roQBoSqJjIVVgjh1GmSTcaXN7ZiHUS2VvO+ASM4ByNlMrzGJsKcLiUyFFSP076bso/lxl0lbjHuOSmwq+9JY7jsSUm+AfgtuRbbGEYyNxo6FpnQopZkkb/t+33BWvf5pbNuT9g05Vp34kJKfd9jROyZ+aB+HgDgkDWuo9IHzyIodfGJ42yB+YZdxGZWd8wOSkte7UZal+HWy9E7H58MrBUQDlasJa3KfA63gUDFD2wPh7uYOqrSJN+Iy3NSaaZMxE3HxLUj3OZ0l+jss70cpRQ4HLBDkjnuWvk5bfT2/FarF4AsJQxidLA0P0Y6fOUI7PS8djxPmhd7nigpBrbTdRYfwVnLKhRIH41UEW2WOWGNG8DoEVeThBQFBe/fhoONxIljQOJAojTwi0QhkCuyPCPIimtFo16pEF0KUWl/uno5SJyffPOaRbpOQ6AjyOktaMoKrfBq/AsxcVqlNnPz0gVzbTic2gOEQt/WsjOzpZEq6PL21G3NOUSbYkXc6FLUY=
